@@ -7,6 +7,7 @@ import CodeImage from './images/code.jpg'
 import { CSSProperties } from "react";
 import DataStructor from './images/Data-Structure-and-Algorithm.jpg'
 import ModernWebsite from './images/modern-websites-design-example-ptect.jpg'
+import axios from 'axios';
 
 
 export default function Home() {
@@ -40,21 +41,12 @@ export default function Home() {
 
     try {
       console.log(process.env.API_LOCATION)
-      const response = await fetch("https://cs-tutoring-mfiz.vercel.app/api/emailer", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(formData),
-      });
+      const response = axios.post("https://cs-tutoring-mfiz.vercel.app/api/emailer", {
+        body: JSON.stringify(formData)
+      })
 
-      if (response.ok) {
-        // Handle success, e.g., show a success message or clear the form
-        console.log("Form submitted successfully");
-      } else {
-        // Handle error, e.g., show an error message
-        console.error("Form submission failed");
-      }
+
+
     } catch (error) {
       console.error("An error occurred while submitting the form:", error);
     }
