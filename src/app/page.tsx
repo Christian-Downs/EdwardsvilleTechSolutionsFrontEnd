@@ -5,6 +5,7 @@ import CodeImage from './images/code.jpg'
 import { CSSProperties } from "react";
 import DataStructor from './images/Data-Structure-and-Algorithm.jpg'
 import ModernWebsite from './images/modern-websites-design-example-ptect.jpg'
+const nodemailer = require("nodemailer");
 
 export default function Home() {
   var topSectionStyle: CSSProperties = {
@@ -15,26 +16,11 @@ export default function Home() {
   async function handleSubmit(event: { preventDefault: () => void; target: HTMLFormElement | undefined; }){
 
     event.preventDefault();
-    const formData = new FormData(event.target)
-    try {
 
-      const response = await fetch('/api/contact', {
-        method: 'post',
-        body: formData,
-      });
 
-      if (!response.ok) {
-        console.log("falling over")
-        throw new Error(`response status: ${response.status}`);
-      }
-      const responseData = await response.json();
-      console.log(responseData['message'])
 
-      alert('Message successfully sent');
-    } catch (err) {
-      console.error(err);
-      alert("Error, please try resubmitting the form");
-    }
+
+
   };
   
 
@@ -78,7 +64,7 @@ export default function Home() {
                 </a>
                 <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Struggling with loops, conditionals, or functions? Get personalized help to understand the core concepts of programming in languages like Python, Java, and C#.</p>
                 <a href="#contact" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                  Let's Learn
+                  Let&apos;s Learn
                   <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
                   </svg>
