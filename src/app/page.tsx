@@ -4,7 +4,7 @@ import Image from "next/image";
 import Head from "next/head";
 import TopBackground from './images/student_typing.jpg';
 import CodeImage from './images/code.jpg'
-import { CSSProperties } from "react";
+import React, { CSSProperties, useState } from "react";
 import DataStructor from './images/Data-Structure-and-Algorithm.jpg'
 import ModernWebsite from './images/modern-websites-design-example-ptect.jpg'
 import axios from 'axios';
@@ -15,16 +15,16 @@ export default function Home() {
     backgroundImage: `url(${TopBackground.src})`,
 
   }
+  const [isSumbitting, setIsSubmitting] = useState(false);
 
 
   const handleInputChange = (e: { target: { name: any; value: any; }; }) => {
     const { name, value } = e.target;
 
   };
-
-  async function handleSubmit (event: {
-    [x: string]: any; preventDefault: () => void; 
-}) {
+  async function handleSubmit(event: {
+    [x: string]: any; preventDefault: () => void;
+  }) {
 
     const email = (document.getElementById("email") as HTMLInputElement)?.value;
     const subject = (document.getElementById("subject") as HTMLInputElement)?.value;;
@@ -38,12 +38,19 @@ export default function Home() {
 
     event.preventDefault();
     console.log("Submitting form with data:", formData);
-
+    setIsSubmitting(true);
     try {
+
       console.log(process.env.API_LOCATION)
-      const response = axios.post("https://cs-tutoring-mfiz.vercel.app/api/emailer", {
+      const response = await axios.post("https://cs-tutoring-mfiz.vercel.app/api/emailer", {
         body: JSON.stringify(formData)
       })
+      if (response.status === 200) {
+        (document.getElementById("email") as HTMLInputElement).value = "";
+        (document.getElementById("subject") as HTMLInputElement).value = "";
+        (document.getElementById("message") as HTMLInputElement).value = "";
+
+      }
 
 
 
@@ -51,7 +58,7 @@ export default function Home() {
       console.error("An error occurred while submitting the form:", error);
     }
   };
-  
+
 
   return (
     <div>
@@ -70,9 +77,9 @@ export default function Home() {
         <div style={topSectionStyle} className="bg-fixed bg-contain md:h-96 md:bg-cover grid place-content-center">
           <h2 className="pb-4 pt-4 md:text-2xl text-center drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,1)]" >Personalized Computer Science Tutoring for SIUE Students</h2>
           <a href="#contact" className="pb-5 md:pb-0 grid place-content-center">
-          <button className="p-0 m-0 self-center snap-center origin-center place-self-center" style={{ padding: '1rem', backgroundColor: '#28a745', color: '#fff', border: 'none', borderRadius: '5px' }}>
-            Contact Us
-          </button>
+            <button className="p-0 m-0 self-center snap-center origin-center place-self-center" style={{ padding: '1rem', backgroundColor: '#28a745', color: '#fff', border: 'none', borderRadius: '5px' }}>
+              Contact Us
+            </button>
           </a>
         </div>
 
@@ -141,7 +148,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div id = "contact">
+        <div id="contact">
           <section className="bg-white dark:bg-gray-900">
             <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
               <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Contact Us</h2>
@@ -149,29 +156,29 @@ export default function Home() {
               <form onSubmit={handleSubmit} className="space-y-8">
                 <div>
                   <label htmlFor="email"
-                   className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-                   
-                   >Your email</label>
+                    className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+
+                  >Your email</label>
                   <input type="email"
-                   id="email"
+                    id="email"
                     className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
-                     placeholder="name@flowbite.com" required
-          
-                    
-                     />
+                    placeholder="eid@siue.edu" required
+
+
+                  />
                 </div>
                 <div>
                   <label htmlFor="subject" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Subject</label>
-                  <input 
-                    
+                  <input
+
                     type="text" id="subject" className="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Let us know how we can help you" required />
                 </div>
                 <div className="sm:col-span-2">
                   <label htmlFor="message" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Your message</label>
-                  <textarea 
-                     id="message" rows={6} className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Leave a comment..."></textarea>
+                  <textarea
+                    id="message" rows={6} className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Leave a comment..."></textarea>
                 </div>
-                <button type="submit" onClick={(handleSubmit)} className="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-red-700 sm:w-fit hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-primary-300 bg-primary-600 hover:bg-primary-700 focus:ring-primary-800">Send message</button>
+                <button type="submit" onClick={(handleSubmit)} disabled={isSumbitting} className="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-red-700 sm:w-fit hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-primary-300 bg-primary-600 hover:bg-primary-700 focus:ring-primary-800">Send message</button>
               </form>
             </div>
           </section>
