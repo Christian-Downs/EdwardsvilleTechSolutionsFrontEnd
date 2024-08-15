@@ -92,7 +92,7 @@ export default function Home() {
 
             <div className="mt-5 xl:mt-0 max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 flex flex-col">
               <a href="#contact">
-                <img className="rounded-t-lg" src={CodeImage.src} alt="" />
+                <img className="rounded-t-lg h-48 w-full" src={CodeImage.src} alt="" />
               </a>
               <div className="p-5">
                 <a href="#contact">
@@ -110,7 +110,7 @@ export default function Home() {
 
             <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 flex flex-col">
               <a href="#contact">
-                <img className="rounded-t-lg h-min" src={DataStructor.src} alt="" />
+                <img className="rounded-t-lg h-48 w-full" src={DataStructor.src} alt="" />
               </a>
               <div className="p-5">
                 <a href="#contact">
@@ -129,7 +129,7 @@ export default function Home() {
 
             <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 flex flex-col">
               <a href="#contact">
-                <img className="rounded-t-lg" src={ModernWebsite.src} alt="" />
+                <img className="rounded-t-lg h-48 w-full" src={ModernWebsite.src} alt="" />
               </a>
               <div className="p-5">
                 <a href="#contact">
