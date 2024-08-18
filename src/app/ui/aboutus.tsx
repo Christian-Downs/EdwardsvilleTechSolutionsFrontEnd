@@ -21,13 +21,13 @@ export default function AboutUs() {
 
                     <div className="space-y-8">
                         <p className="text-base sm:leading-relaxed md:text-2xl text-black">
-                            Hi, I'm Christian, a Computer Science major dedicated to helping SIUE students excel in their studies.
+                            Hi, I&apos;m Christian, a Computer Science major dedicated to helping SIUE students excel in their studies.
                             With certifications in full-stack development and three years of professional experience at UST Global
                             and Mattel, I specialize in web development, algorithms, and data structures. My expertise spans multiple
-                            languages and technologies, including Python, Java, C++, React, and SQL. Whether you're building your
-                            first web project or mastering core programming concepts, I'm here to provide the personalized guidance
+                            languages and technologies, including Python, Java, C++, React, and SQL. Whether you&apos;re building your
+                            first web project or mastering core programming concepts, I&apos;m here to provide the personalized guidance
                             you need to succeed.
-                            {/* Hi, I'm John. I'm a 35-year-old software engineer with a passion for creating innovative solutions.
+                            {/* Hi, I&apos;m John. I&apos;m a 35-year-old software engineer with a passion for creating innovative solutions.
                 I graduated with a degree in Computer Science from a prestigious university and have been working in
                 the tech industry for over a decade. Throughout my career, I have gained extensive experience in
                 programming languages like Python, Java, and C++. I thrive in challenging environments and enjoy
