@@ -8,6 +8,8 @@ import React, { CSSProperties, useState } from "react";
 import DataStructor from './images/Data-Structure-and-Algorithm.jpg'
 import ModernWebsite from './images/modern-websites-design-example-ptect.jpg'
 import axios from 'axios';
+import Navbar from "./ui/navbar";
+import AboutUs from "./ui/aboutus";
 
 
 export default function Home() {
@@ -68,14 +70,11 @@ export default function Home() {
         <meta name="description" content="Personalized Computer Science Tutoring for SIUE Students" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
       </Head>
-
-      <header className="bg-black grid place-content-center h-14">
-        <h1 className="text-center">Computer Science Tutoring at SIUE</h1>
-      </header>
-
+      
+      
       <main className="">
         <div style={topSectionStyle} className="bg-fixed bg-contain md:h-96 md:bg-cover grid place-content-center">
-          <h2 className="pb-4 pt-4 md:text-2xl text-center drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,1)]" >Personalized Computer Science Tutoring for SIUE Students</h2>
+          <h2 className="pb-4 pt-4 md:text-2xl text-center drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,1)]" >Personalized Tech Solutions</h2>
           <a href="#contact" className="pb-5 md:pb-0 grid place-content-center">
             <button className="p-0 m-0 self-center snap-center origin-center place-self-center" style={{ padding: '1rem', backgroundColor: '#28a745', color: '#fff', border: 'none', borderRadius: '5px' }}>
               Contact Us
@@ -83,7 +82,7 @@ export default function Home() {
           </a>
         </div>
 
-        <div className="text-center pb-3" >
+        <div className="text-center pb-3" id="service" >
           <h1 className="pt-5 pb-5 text-2xl">
             Services
           </h1>
@@ -146,6 +145,13 @@ export default function Home() {
             </div>
 
           </div>
+        </div>
+
+        <div id="aboutUs" className="scroll-mt-28">
+          <div>
+
+          </div>
+          <AboutUs></AboutUs>
         </div>
 
         <div id="contact">
