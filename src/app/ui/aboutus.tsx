@@ -1,6 +1,6 @@
 
 import React, { CSSProperties, useState } from "react";
-
+import Image from 'next/image';
 
 
 export default function AboutUs() {
@@ -9,7 +9,7 @@ export default function AboutUs() {
         <div className="w-full max-w-7xl px-4 mx-auto sm:px-8 my-10 z-0">
             <blockquote className="relative grid items-center bg-white shadow-xl md:grid-cols-3 rounded-xl">
 
-                <img className="hidden object-cover w-full h-full rounded-l-xl md:block" style={{ "clipPath": "polygon(0 0%, 100% 0%, 75% 100%, 0% 100%)" }} src="/images/me.jpg" />
+                <img className="hidden object-cover w-full h-full rounded-l-xl md:block" style={{ "clipPath": "polygon(0 0%, 100% 0%, 75% 100%, 0% 100%)" }} src="/me.jpg" alt={""} />
 
                 <article className="relative p-6 md:p-8 md:col-span-2">
                     <svg className="absolute top-0 right-0 hidden w-24 h-24 -mt-12 -mr-12 text-primary-600 md:block" width="256"
@@ -35,7 +35,7 @@ export default function AboutUs() {
                         </p>
 
                         <footer className="flex items-center space-x-4 md:space-x-0">
-                            <img className="w-12 h-12 rounded-full md:hidden" src="/images/me.jpg" />
+                            <img className="w-12 h-12 rounded-full md:hidden" src="/me.jpg" alt={""} />
                             <span className="font-bold text-lg">John doe</span>
                         </footer>
                     </div>
