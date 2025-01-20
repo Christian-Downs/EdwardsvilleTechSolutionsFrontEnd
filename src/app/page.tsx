@@ -95,11 +95,13 @@ export default function Home() {
               </a>
               <div className="p-5">
                 <a href="#contact">
-                  <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Master Programming Basics</h5>
+                  <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">AI-Powered Chatbot Development</h5>
                 </a>
-                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Struggling with loops, conditionals, or functions? Get personalized help to understand the core concepts of programming in languages like Python, Java, and C#.</p>
+                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Bring your business into the future with custom AI-powered chatbots. Enhance customer engagement, streamline support, and automate routine queries with smart, responsive bots tailored to your specific needs. Whether it’s for websites, messaging platforms, or apps, we’ve got you covered.
+
+</p>
                 <a href="#contact" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                  Let&apos;s Learn
+                  Jump Forward
                   <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                     <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
                   </svg>
@@ -113,9 +115,9 @@ export default function Home() {
               </a>
               <div className="p-5">
                 <a href="#contact">
-                  <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Ace Algorithms & Data Structures</h5>
+                  <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Technical Consulting & Training</h5>
                 </a>
-                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Need to improve your problem-solving skills? Learn how to approach and solve complex problems using key data structures and algorithms essential for technical interviews and coursework.</p>
+                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Unlock your team's potential with personalized training in programming, algorithms, and tech tools. Whether you're an individual preparing for technical interviews or a team improving workflows, our consulting services are tailored to your unique challenges.</p>
                 <a href="#contact" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                   Get Started
                   <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
@@ -132,9 +134,9 @@ export default function Home() {
               </a>
               <div className="p-5">
                 <a href="#contact">
-                  <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Build and Deploy Web Projects</h5>
+                  <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Custom Web Development & Optimization</h5>
                 </a>
-                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Want to create your own website or web application? Get hands-on guidance in front-end and back-end development, covering HTML, CSS, JavaScript, React, and more.</p>
+                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Create stunning, high-performance websites and web applications tailored to your business goals. Whether you're starting from scratch or need to optimize your existing site, we offer comprehensive services in front-end and back-end development using React, Next.js, and other modern tools.</p>
                 <a href="#contact" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                   Start Building
                   <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
