@@ -7,6 +7,7 @@ import CodeImage from './images/code.jpg'
 import React, { CSSProperties, useState } from "react";
 import DataStructor from './images/Data-Structure-and-Algorithm.jpg'
 import ModernWebsite from './images/modern-websites-design-example-ptect.jpg'
+import Training from './images/wronski-1.png'
 import axios from 'axios';
 import Navbar from "./ui/navbar";
 import AboutUs from "./ui/aboutus";
@@ -111,7 +112,7 @@ export default function Home() {
 
             <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 flex flex-col">
               <a href="#contact">
-                <img className="rounded-t-lg h-48 w-full" src={DataStructor.src} alt="" />
+                <img className="rounded-t-lg h-48 w-full" src={Training.src} alt="" />
               </a>
               <div className="p-5">
                 <a href="#contact">
