@@ -5,9 +5,9 @@ import Head from "next/head";
 import TopBackground from './images/student_typing.jpg';
 import CodeImage from './images/code.jpg'
 import React, { CSSProperties, useState } from "react";
-import DataStructor from './images/Data-Structure-and-Algorithm.jpg'
-import ModernWebsite from './images/modern-websites-design-example-ptect.jpg'
-import Training from './images/wronski-1.png'
+import DataStructor from './images/Data-Structure-and-Algorithm.jpg';
+import ModernWebsite from './images/modern-websites-design-example-ptect.jpg';
+import Training from './images/wronski-1.png';
 import axios from 'axios';
 import Navbar from "./ui/navbar";
 import AboutUs from "./ui/aboutus";
@@ -118,7 +118,7 @@ export default function Home() {
                 <a href="#contact">
                   <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Technical Consulting & Training</h5>
                 </a>
-                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Unlock your team's potential with personalized training in programming, algorithms, and tech tools. Whether you're an individual preparing for technical interviews or a team improving workflows, our consulting services are tailored to your unique challenges.</p>
+                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Unlock your team&apos;s potential with personalized training in programming, algorithms, and tech tools. Whether you&apos;re an individual preparing for technical interviews or a team improving workflows, our consulting services are tailored to your unique challenges.</p>
                 <a href="#contact" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                   Get Started
                   <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
@@ -137,7 +137,7 @@ export default function Home() {
                 <a href="#contact">
                   <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Custom Web Development & Optimization</h5>
                 </a>
-                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Create stunning, high-performance websites and web applications tailored to your business goals. Whether you're starting from scratch or need to optimize your existing site, we offer comprehensive services in front-end and back-end development using React, Next.js, and other modern tools.</p>
+                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Create stunning, high-performance websites and web applications tailored to your business goals. Whether you&apos;re starting from scratch or need to optimize your existing site, we offer comprehensive services in front-end and back-end development using React, Next.js, and other modern tools.</p>
                 <a href="#contact" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                   Start Building
                   <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
