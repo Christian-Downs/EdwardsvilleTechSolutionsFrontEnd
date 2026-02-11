@@ -350,7 +350,7 @@ export default function Home() {
                   Schedule a call
                 </a>
                 <a
-                  href="mailto:christian.downs.15@gmail.com"
+                  href="mailto:EdwardsvilleTechSolutions@gmail.com"
                   className="rounded-full border border-white/60 px-6 py-3 text-sm font-semibold text-white"
                 >
                   Email us
@@ -390,7 +390,7 @@ export default function Home() {
                 </p>
                 <div className="mt-6 space-y-3 text-sm text-slate-600">
                   <p>📍 Edwardsville, IL</p>
-                  <p>📧 christian.downs.15@gmail.com</p>
+                  <p>📧 EdwardsvilleTechSolutions@gmail.com</p>
                   <p>📞 (518) 879-6827</p>
                 </div>
               </div>
@@ -493,7 +493,7 @@ export default function Home() {
               <div className="text-sm text-slate-600">
                 <p className="font-semibold text-slate-900">Contact</p>
                 <p className="mt-3">Edwardsville, IL</p>
-                <p>christian.downs.15@gmail.com</p>
+                <p>EdwardsvilleTechSolutions@gmail.com</p>
                 <p>(518) 879-6827</p>
               </div>
             </div>

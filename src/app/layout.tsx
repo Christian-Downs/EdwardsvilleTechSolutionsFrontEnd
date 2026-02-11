@@ -69,7 +69,7 @@ const jsonLd = {
     "Web development, AI chatbot development, and automation solutions for small businesses and startups.",
   url: "https://www.edwardsvilletechsolutions.com",
   telephone: "+1-518-879-6827",
-  email: "christian.downs.15@gmail.com",
+  email: "EdwardsvilleTechSolutions@gmail.com",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Edwardsville",
