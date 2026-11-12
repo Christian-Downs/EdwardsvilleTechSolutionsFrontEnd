@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { FormEvent, useState } from "react";
+import { estimate } from "@/lib/estimate";
 
 type Result = { task: string; hours: number; rate: number; share: number; key: number };
 
@@ -20,11 +21,9 @@ export default function Estimator() {
     setResult({ task: task.trim() || "Repetitive task", hours, rate, share, key: Date.now() });
   }
 
-  const yearHours = result ? result.hours * 52 : 0;
-  const yearCost = result ? yearHours * result.rate : 0;
-  const savedHours = result ? Math.round(yearHours * (result.share / 100)) : 0;
-  const savedMoney = result ? savedHours * result.rate : 0;
-  const workDays = Math.round(savedHours / 8);
+  const { yearHours, yearCost, savedHours, savedMoney, workDays } = estimate(
+    result ?? { hours: 0, rate: 0, share: 0 }
+  );
 
   const note = result
     ? `Task: ${result.task}. About ${result.hours} hrs/week. Estimator says roughly ${savedHours} hours a year could be handed off.`

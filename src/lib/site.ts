@@ -28,7 +28,7 @@ export type Service = {
   complaint: string; // what the customer says
   fix: string; // what we do about it
   intro: string;
-  from: string; // "from" price shown on the home page ticket
+  from: string; // lowest one-off job price (monthly plans and hourly rates don't count)
   items: LineItem[];
   goodFor: string[];
   metaTitle: string;
@@ -148,7 +148,7 @@ export const services: Service[] = [
     fix: "A fast site you actually own, kept up by someone you can call.",
     intro:
       "We build websites for small businesses and keep them running. Where it makes sense, we move you off pricey monthly website builders onto a site you own, so your cost stays low and nobody can hold it hostage.",
-    from: "$50 / mo",
+    from: "$400",
     items: [
       {
         name: "New website",

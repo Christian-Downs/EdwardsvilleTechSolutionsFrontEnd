@@ -23,3 +23,16 @@ See `.env.example`. Set them in Vercel → Project → Settings → Environment 
 | `SMTP_USER`, `SMTP_PASS` | Send call requests from this project. Without them, requests go through the old site's mailer. |
 | `OPENAI_API_KEY` | Turns on the "Ring the bell" AI helper. Hidden without it. |
 | `NEXT_PUBLIC_GA_ID` | Google Analytics measurement ID (`G-…`). |
+
+## Tests
+
+```bash
+npm test            # unit tests: prices/data, estimator maths, both API routes (under a second)
+npm run test:e2e    # browser tests on desktop and phone sizes (about a minute; builds the site first)
+npm run test:all    # lint + both
+```
+
+First time only, the browser tests need `npx playwright install chromium`.
+
+No test sends a real email or calls OpenAI — those requests are intercepted. The same
+checks run on GitHub for every push (`.github/workflows/tests.yml`).
