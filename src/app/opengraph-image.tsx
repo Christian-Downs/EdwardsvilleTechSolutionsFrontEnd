@@ -2,11 +2,8 @@ import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
 
-export const alt = "Edwardsville Tech Solutions";
-export const size = {
-  width: 1200,
-  height: 630,
-};
+export const alt = "Edwardsville Tech Solutions — tech help that works like a good repair shop";
+export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
 export default async function Image() {
@@ -15,76 +12,66 @@ export default async function Image() {
       <div
         style={{
           display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
           width: "100%",
           height: "100%",
-          background: "linear-gradient(135deg, #0f172a 0%, #1e293b 100%)",
-          padding: 60,
+          background: "#F4EEDF",
+          padding: 48,
         }}
       >
-        {/* Logo */}
-        <img
-          src="https://www.edwardsvilletechsolutions.com/logo.png"
-          alt="Logo"
-          width={120}
-          height={120}
-          style={{ marginBottom: 32 }}
-        />
-
-        {/* Title */}
         <div
           style={{
             display: "flex",
             flexDirection: "column",
-            alignItems: "center",
-            textAlign: "center",
+            width: "100%",
+            height: "100%",
+            border: "4px solid #18202F",
+            background: "#FBF8EF",
+            boxShadow: "14px 16px 0 rgba(24,32,47,.18)",
           }}
         >
-          <h1
+          <div
             style={{
-              fontSize: 56,
-              fontWeight: 700,
-              color: "#ffffff",
-              margin: 0,
-              lineHeight: 1.2,
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+              background: "#18202F",
+              color: "#FBF8EF",
+              padding: "18px 36px",
+              fontSize: 30,
+              letterSpacing: 4,
             }}
           >
-            Edwardsville Tech Solutions
-          </h1>
-          <p
-            style={{
-              fontSize: 28,
-              color: "#94a3b8",
-              marginTop: 16,
-              maxWidth: 800,
-            }}
-          >
-            Web Development • AI Chatbots • Automation
-          </p>
-        </div>
-
-        {/* Tagline */}
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            marginTop: 40,
-            padding: "12px 28px",
-            background: "#10b981",
-            borderRadius: 9999,
-          }}
-        >
-          <span style={{ fontSize: 22, fontWeight: 600, color: "#ffffff" }}>
-            Local expertise. Modern solutions.
-          </span>
+            <span>WORK ORDER</span>
+            <span style={{ color: "#F5DC6B" }}>EDWARDSVILLE, ILL.</span>
+          </div>
+          <div style={{ display: "flex", flexDirection: "column", flex: 1, padding: "36px 44px", justifyContent: "space-between" }}>
+            <div style={{ display: "flex", flexDirection: "column" }}>
+              <div style={{ fontSize: 30, color: "#1B3F8F", letterSpacing: 2 }}>EDWARDSVILLE TECH SOLUTIONS</div>
+              <div style={{ fontSize: 84, fontWeight: 800, color: "#18202F", lineHeight: 1.02, marginTop: 18 }}>
+                Tech help that works like a good repair shop.
+              </div>
+            </div>
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end" }}>
+              <div style={{ fontSize: 30, color: "#4A5366" }}>Websites · AI helpers · Custom tools</div>
+              <div
+                style={{
+                  display: "flex",
+                  border: "6px solid #C4362B",
+                  color: "#C4362B",
+                  fontSize: 38,
+                  fontWeight: 800,
+                  letterSpacing: 4,
+                  padding: "8px 22px",
+                  transform: "rotate(-7deg)",
+                }}
+              >
+                PLAIN ENGLISH
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     ),
-    {
-      ...size,
-    }
+    { ...size }
   );
 }
